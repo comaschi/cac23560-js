@@ -73,27 +73,27 @@
 
 
 
-    <!-- ticket Form -->
+    <!-- ticket Form 
     <section>
-        <div class="container" id="tickets">
+        <div class="container py-4 mx-auto" id="tickets">
 
-            <div class="row text-center gap-2 px-5 py-2">
-                <div class="col card ticket border border-primary">
-                    <h4 class="ticket-card">Estudiante</h4>
+            <div class="row text-center gap-3 py-2">
+                <div class="col card ticket border-2 border-primary">
+                    <h4 class="ticket-card text-uppercase">Estudiante</h4>
                     <p class="ticket-text">Tienen un descuento</p>
                     <p class="ticket-porcentaje">80%</p>
                     <p class="ticket-text">* presentar Documentación</p>
                 </div>
 
-                <div class="col card ticket border border-success">
-                    <h4 class="ticket-card">Trainee</h4>
+                <div class="col card ticket border-2 border-success">
+                    <h4 class="ticket-card text-uppercase">Trainee</h4>
                     <p class="ticket-text">Tienen un descuento</p>
                     <p class="ticket-porcentaje">50%</p>
                     <p class="ticket-text">* presentar Documentación</p>
                 </div>
 
-                <div class="col card ticket border border-warning">
-                    <h4 class="ticket-card">Junior</h4>
+                <div class="col card ticket border-2 border-warning">
+                    <h4 class="ticket-card text-uppercase">Junior</h4>
                     <p class="ticket-text">Tienen un descuento</p>
                     <p class="ticket-porcentaje">15%</p>
                     <p class="ticket-text">* presentar Documentación</p>
@@ -102,70 +102,117 @@
 
             </div>
 
+            -->
+
+    <div class="container-price text-center mx-5 px-4 mt-5 pt-5">
+        <div class="row col-lg-6 gap-1 py-2 mx-auto">
+            <div class="col mb-2">
+                <div class="card shadow-sm border-3 border-primary">
+                    <div class="card-header">
+                        <h4 class="mt-2">ESTUDIANTE</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Tiene un descuento</li>
+                            <li>80%</li>
+                            <li>* Presentar documentación</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-2">
+                <div class="card shadow-sm border-3 border-success">
+                    <div class="card-header">
+                        <h4 class="mt-2">TRAINEE</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Tiene un descuento</li>
+                            <li class="text-dark">50%</li>
+                            <li>* Presentar documentación</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-2">
+                <div class="card shadow-sm border-3 border-warning">
+                    <div class="card-header">
+                        <h4 class="mt-2">JUNIOR</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Tiene un descuento</li>
+                            <li>15%</li>
+                            <li>* Presentar documentación</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row text-center py-5">
+
+        <p class=" text-center mx-auto mb-1 ">VENTA</p>
+        <h2 class="text-center mx-auto ">VALOR DEL TICKET $200</h2>
+
+    </div>
 
 
-            <div class="row text-center">
+    <form class="row col-sm-6 col-lg-6 g-3 mx-auto">
 
-                <p class=" text-center mx-auto mb-1 ">VENTA</p>
-                <h2 class="text-center mx-auto ">VALOR DEL TICKET $200</h2>
+        <div class="col-md-6">
+            <input type="text" id="name" name="name" class="form-control" placeholder="Nombre">
+            <label for="name" class=""></label>
+        </div>
 
+        <div class="col-md-6">
+            <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Apellido">
+            <label for="lastName" class=""></label>
+        </div>
+
+        <div class="col-12">
+            <input type="text" id="mail" name="email" class="form-control" placeholder="Correo">
+            <label for="email" class="form-label"></label>
+        </div>
+
+        <div class="col-md-6">
+
+            <label for="inputCity" class="form-label">Cantidad</label>
+            <input type="text" class="form-control" id="inputCity" placeholder="Cantidad">
+        </div>
+        <div class="col-md-6">
+            <label for="inputState" class="form-label">Categoria</label>
+            <select id="inputState" class="form-select">
+                <option selected id="estudiante">Estudiante</option>
+                <option id="trainee">Trainee</option>
+                <option id="junior">Junior</option>
+            </select>
+        </div>
+
+
+        <div class="Resultados row my-4 mx-auto">
+            <div class="col-md-12 bg-body-secondary pt-4 px-5 text-start rounded-3 border border-info">
+                <h6 class="text-uppercase text-dark"> Total a pagar: $ </h6>
+                <p class="text-center " id="resultado"></p>
+            </div>
+        </div>
+
+        <div class="row mb-5 mx-auto">
+            <div class="col-md-6 col-lg-6 col-sm-6 d-grid">
+                <button type="button" onclick="calculo()" class="btn btn-primary btn-lg btn-block ">Calcular</button>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-6 d-grid">
+                <button type="reset" onclick="reseteo()" class="btn btn-primary btn-lg btn-block">Borrar</button>
             </div>
 
-
-            <form class="row g-3">
-
-                <div class="col-md-6">
-                    <input type="text" id="name" name="name" class="form-control" placeholder="Nombre">
-                    <label for="name" class=""></label>
-                </div>
-
-                <div class="col-md-6">
-                    <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Apellido">
-                    <label for="lastName" class=""></label>
-                </div>
-
-                <div class="col-12">
-                    <input type="text" id="email" name="email" class="form-control" placeholder="Correo">
-                    <label for="email" class=""></label>
-                </div>
-
-                <div class="col-md-6">
-
-                    <label for="inputCity" class="form-label">Cantidad</label>
-                    <input type="text" class="form-control" id="inputCity" placeholder="Cantidad">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputState" class="form-label">Categoria</label>
-                    <select id="inputState" class="form-select">
-                        <option selected>Estudiante</option>
-                        <option>Trainee</option>
-                        <option>Junior</option>
-                    </select>
-                </div>
-
-
-                <div class="row">
-                    <div class="col-md-12 bg-info text-white m-3 gap-5 px-5 text-center " >
-
-                        <p> total a pagar : $</p>
-                     
-                    </div>
-                </div>
-
-                <div class="row ">
-                    <div class="col-md-6 d-grid">
-                        <button type="reset" class="btn btn-primary btn-lg btn-block ">Borrar</button>
-                    </div>
-                    <div class="col-md-6 d-grid">
-                        <button type="submit" class="btn btn-primary btn-lg btn-block">Resumen</button>
-                    </div>
-
-                </div>
-
-            </form>
-
         </div>
+
+    </form>
+
+    </div>
     </section>
+
 
     <!-- Footer  -->
     <section>
